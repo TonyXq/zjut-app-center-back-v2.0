@@ -1,0 +1,89 @@
+[2018-12-10 00:35:06.466] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 00:44:38.928] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 00:47:32.958] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 01:10:42.954] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 01:16:57.887] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 01:19:56.958] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 01:22:44.014] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 10:36:04.603] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 10:39:27.599] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 10:55:08.191] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 10:58:22.293] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 11:55:20.172] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 12:05:00.691] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 12:06:06.771] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 12:08:36.954] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 12:53:36.169] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 13:24:50.056] o.s.b.d.autoconfigure.OptionalLiveReloadServer [62] - Unable to start LiveReload server
+[2018-12-10 13:28:40.991] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 13:37:55.885] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 13:39:31.510] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 13:40:55.520] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 13:42:26.600] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 13:46:39.573] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 13:48:01.179] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+[2018-12-10 16:19:17.297] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [85] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/admin/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/admin/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+

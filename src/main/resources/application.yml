@@ -1,0 +1,12 @@
+spring:
+  profiles:
+#    active: test
+    active: zjut
+
+#日志文件配置：
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: ERROR
+    com.xdbigdata.app_center: DEBUG
+

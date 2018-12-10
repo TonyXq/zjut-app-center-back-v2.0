@@ -1,0 +1,57 @@
+#服务器相关配置
+server:
+  port: 8111
+#spring相关配置
+spring:
+  #数据库
+  datasource:
+      url: jdbc:mysql://10.25.171.51:3306/ZjutEvaluation?useUnicode=true&characterEncoding=UTF-8
+      username: tangyijun
+      password: aRCdkyOs6YGXvsZ5
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+
+  #处理404抛出异常(当出现404直接抛出异常)
+  mvc:
+    throw-exception-if-no-handler-found: true
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#开启调试模式 打印详细的日志
+debug: true
+
+mybatis:
+  mapper-locations: classpath:/com/xdbigdata/evaluation_zjut/mapper/*.xml
+  type-aliases-package: com.xdbigdata.evaluation_zjut.domain,com.xdbigdata.evaluation_zjut.common.dto
+  config-location: classpath:/mybatis-config.xml
+
+#  #mapper
+#  #mappers 多个接口时逗号隔开
+#mapper:
+##  mappers:
+##    - com.xdbigdata.evaluation_zjutt.mapper.UserMapper
+#  not-empty: false
+#  identity: MYSQL
+
+  #pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+file:
+  path: \static\upload\

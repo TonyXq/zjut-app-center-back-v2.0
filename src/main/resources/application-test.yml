@@ -1,0 +1,105 @@
+#服务器相关配置
+server:
+  port: 8080
+#spring相关配置
+
+spring:
+  session:
+    store-type: redis
+  #redis配置
+  redis:
+    host: 172.16.170.64
+    port: 6382
+    # REDIS (RedisProperties)
+    # Redis数据库索引（默认为0）
+    database: 1
+    # Redis服务器连接密码（默认为空）
+    password: xdkj@6c52
+    # 连接池最大连接数（使用负值表示没有限制）
+    # 连接超时时间（毫秒）
+    timeout: 0
+    pool:
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接
+      min-idle: 0
+  #数据库
+  datasource:
+#    url: jdbc:mysql://172.16.2.201:3306/zjut_appcenter?useUnicode=true&characterEncoding=UTF-8
+##      url: jdbc:mysql://39.108.238.199:3306/zjut_appcenter?useUnicode=true&characterEncoding=UTF-8
+#    username: lvlongfei
+#    password: wNoIOXWFQV@l0oQB
+
+    url: jdbc:mysql://172.16.170.74:3306/zjut_appcenter?useUnicode=true&characterEncoding=UTF-8
+    username: lvlongfei
+    password: wNoIOXWFQV@l0oQB
+
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  #处理404抛出异常(当出现404直接抛出异常)
+  mvc:
+    throw-exception-if-no-handler-found: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  application:
+    name: wisdom-platform
+#开启调试模式 打印详细的日志
+debug: true
+
+#SpringCloud集成用户管理
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://172.16.170.73:8082/eureka/
+      defaultZone: http://127.0.0.1:1000/eureka/
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+file:
+  path: \static\upload\
+
+
+mybatis:
+  type-aliases-package: ${my-config.domain-package},${my-config.domain-package}.dto
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:/mybatis-config.xml
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+my-config:
+  base-package: com.xdbigdata.app_center
+  domain-package: com.xdbigdata.app_center.domain
+  controller-package: com.xdbigdata.app_center.web
+  service-package: com.xdbigdata.app_center.service
+  mapper-package: com.xdbigdata.app_center.mapper
+  xd-mapper: com.xdbigdata.mybatis.Mapper.XDMapper
+  swagger:
+    title: 这个项目的名字
+    description: 这个项目的描述
+    contact: 联系人
+    version: 1.0.0
