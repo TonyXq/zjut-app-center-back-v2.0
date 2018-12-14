@@ -1,6 +1,6 @@
 #服务器相关配置
 server:
-  port: 8080
+  port: 8087
 #spring相关配置
 
 spring:
@@ -66,8 +66,8 @@ debug: true
 eureka:
   client:
     serviceUrl:
-#      defaultZone: http://172.16.170.73:8082/eureka/
-      defaultZone: http://127.0.0.1:1000/eureka/
+      defaultZone: http://172.16.170.73:8082/eureka/
+#      defaultZone: http://127.0.0.1:1000/eureka/
 hystrix:
   command:
     default:
