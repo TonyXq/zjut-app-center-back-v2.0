@@ -66,4 +66,17 @@ public class AppController {
         List<App> appList = appMapper.findByRole(roleName);
         return new CommonResult(true, appList, ErrorCode.FIND_SUCCESS.code, ErrorCode.FIND_SUCCESS.des);
     }
+
+    @ApiOperation(value = "查看用户拥有的应用")
+    @RequestMapping(value = "/loginUser/app", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult findAll(HttpSession httpSession) {
+        RoleAndInfoDto roleAndInfoDtoInSession = (RoleAndInfoDto) httpSession.getAttribute("sessionUser");
+        List<Role> roles = roleAndInfoDtoInSession.getRoleList();
+        List<String> roleName = new ArrayList<>();
+        for (Role r : roles) {
+            roleName.add(r.getName());
+        }
+        return new CommonResult(true, appMapper.findByRole(roleName), ErrorCode.FIND_SUCCESS.code, ErrorCode.FIND_SUCCESS.des);
+    }
 }
