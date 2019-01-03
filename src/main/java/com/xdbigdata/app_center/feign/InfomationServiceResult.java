@@ -23,8 +23,8 @@ public class InfomationServiceResult {
             CommonResult userReslut1 = informationService.findResultBySn(sn, Contation.WELCOME);
             CommonResult studentReslut = iRemoteService.findStudentChangeInfo(sn, Contation.BACIS);
             if (Objects.isNull(userReslut.getData()) || Objects.isNull(userReslut1.getData()) || Objects.isNull(studentReslut.getData())) {
-                inforMation.setIsUpdate("1");
-                inforMation.setUrl(Contation.URL);
+                inforMation.setIsUpdate("0");
+                inforMation.setUrl("");
             }else {
                 inforMation.setIsUpdate("0");
                 inforMation.setUrl("");
