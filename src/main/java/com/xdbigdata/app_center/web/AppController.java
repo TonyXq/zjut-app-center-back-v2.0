@@ -68,9 +68,9 @@ public class AppController {
     }
 
     @ApiOperation(value = "查看用户拥有的应用")
-    @RequestMapping(value = "/loginUser/app", method = RequestMethod.GET)
+    @RequestMapping(value = "/loginUser/app", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult findAll(List<String> roleName) {
+    public CommonResult findAll(@RequestBody List<String> roleName) {
 //        RoleAndInfoDto roleAndInfoDtoInSession = (RoleAndInfoDto) httpSession.getAttribute("sessionUser");
 //        List<Role> roles = roleAndInfoDtoInSession.getRoleList();
 //        List<String> roleName = new ArrayList<>();
