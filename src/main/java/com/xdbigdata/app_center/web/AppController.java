@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -47,10 +48,10 @@ public class AppController {
             return new CommonResult(false, null, ErrorCode.HANDLER_FAILED.code, "请选择角色");
         } else if (roles.size() > 1) {
             return new CommonResult(false, null, ErrorCode.HANDLER_FAILED.code, "角色只能选择一个");
-        }else if (CollectionUtils.isEmpty(roleAndInfoDtoInSession.getRoleList())){
-            return new CommonResult(false,null,ErrorCode.HANDLER_FAILED.code,"当前用户没有角色");
-        }else if(!roleNames.containsAll(selectedRolesNames)){
-            return new CommonResult(false,null,ErrorCode.HANDLER_FAILED.code,"选择的角色"+selectedRolesNames+"不在当前用户角色信息中");
+        } else if (CollectionUtils.isEmpty(roleAndInfoDtoInSession.getRoleList())) {
+            return new CommonResult(false, null, ErrorCode.HANDLER_FAILED.code, "当前用户没有角色");
+        } else if (!roleNames.containsAll(selectedRolesNames)) {
+            return new CommonResult(false, null, ErrorCode.HANDLER_FAILED.code, "选择的角色" + selectedRolesNames + "不在当前用户角色信息中");
         }
         //把角色集合重新设值到session中
         ArrayList<Role> selectedRoles = new ArrayList<>();
@@ -64,6 +65,11 @@ public class AppController {
             roleName.add(r.getName());
         }
         List<App> appList = appMapper.findByRole(roleName);
+        if (Objects.equals(roleAndInfoDtoInSession.getSn(), "swdt")) {
+            List<App> collect = appList.stream().filter(app -> app.getName().equals("信息管理")).collect(Collectors.toList());
+            return new CommonResult(true, collect, ErrorCode.FIND_SUCCESS.code, ErrorCode.FIND_SUCCESS.des);
+        }
+
         return new CommonResult(true, appList, ErrorCode.FIND_SUCCESS.code, ErrorCode.FIND_SUCCESS.des);
     }
 
